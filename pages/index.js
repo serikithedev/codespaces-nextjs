@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 import Button from '../components/Button'
 import ClickCount from '../components/ClickCount'
 import styles from '../styles/home.module.css'
+import { CLIENT_STATIC_FILES_RUNTIME_WEBPACK } from 'next/dist/shared/lib/constants'
 
 function throwError() {
   console.log(
-    // The function body() is not defined
-    document.body()
+    document.body( CLIENT_STATIC_FILES_RUNTIME_WEBPACK)
   )
 }
 
